@@ -35,7 +35,7 @@ docker exec -it spark /bin/bash
 * Execute the the following command which should write the "Pi is roughly 3.1418" on screen
 
     $root@a1s4s3> run-example SparkPi 10
-# Test out the Spark with Hive tutorial here from Hortonwork, http://hortonworks.com/hadoop-tutorial/using-hive-with-orc-from-apache-spark/. Please note these different here since this is a local mode for development. 
+##### Test out the Spark with Hive tutorial here from Hortonwork, http://hortonworks.com/hadoop-tutorial/using-hive-with-orc-from-apache-spark/. Please note these different here since this is a local mode for development. 
 * There is no HDFS, you can skip this 
 
     $hadoop fs -put ./yahoo_stocks.csv /tmp/
