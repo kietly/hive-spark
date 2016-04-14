@@ -17,6 +17,7 @@ docker exec -it spark /bin/bash
 ```
 * note if you see this error: "The name "/spark" is already in use by container" then restart existing container and open terminal
 ```
+docker stop spark
 docker start spark
 docker exec -it spark /bin/bash
 ```
@@ -26,25 +27,35 @@ docker exec -it spark /bin/bash
 
 # Quick testing
 * Run the spark shell
-    
-    $root@a1s4s3> spark-shell 
+```
+$root@a1s4s3> spark-shell 
+```
 
 * Execute the the following command which should return 1000
-
+```
     scala> sc.parallelize(1 to 1000).count()
+```
 
 * Execute the the following command which should write the "Pi is roughly 3.1418" on screen
-
+```
     $root@a1s4s3> run-example SparkPi 10
+```
+    
 ##### Test out the Spark with Hive tutorial here from Hortonwork, http://hortonworks.com/hadoop-tutorial/using-hive-with-orc-from-apache-spark/. Please note these different here since this is a local mode for development. 
 * There is no HDFS, you can skip this 
-
+```
     $hadoop fs -put ./yahoo_stocks.csv /tmp/
+```
+    
 * No yarn client, simply run with no argument 
-
+```
     $spark-shell
+```
+    
 * open text file from local file system instead of HDFS assuming you put yahoo_stocks.csv in /tmp
-
+```
     val yahoo_stocks = sc.textFile("file:///tmp/yahoo_stocks.csv")
+```
+
 * Everything else remain the same.
  
