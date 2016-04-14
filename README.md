@@ -23,19 +23,19 @@ docker exec -it spark /bin/bash
 ## Versions
     Hadoop 2.6.0, Hive 1.1.0 and Apache Spark v1.6.0 from Cloudera CDH 5.7 on Centos 7.2 
 
-# Run the spark shell
-$root@a1s4s3> spark-shell 
+# Quick testing
+* Run the spark shell
+    
+    $root@a1s4s3> spark-shell 
 
-# Execute the the following command which should return 1000
-```
-scala> sc.parallelize(1 to 1000).count()
-```
-# Execute the the following command which should write the "Pi is roughly 3.1418" on screen
-```
-$root@a1s4s3> run-example SparkPi 10
-```
-#Try out the Spark with Hive tutorial here from Hortonwork, http://hortonworks.com/hadoop-tutorial/using-hive-with-orc-from-apache-spark/
-Please note these different here since this is a local mode for development.
+* Execute the the following command which should return 1000
+
+    scala> sc.parallelize(1 to 1000).count()
+
+* Execute the the following command which should write the "Pi is roughly 3.1418" on screen
+
+    $root@a1s4s3> run-example SparkPi 10
+# Test out the Spark with Hive tutorial here from Hortonwork, http://hortonworks.com/hadoop-tutorial/using-hive-with-orc-from-apache-spark/. Please note these different here since this is a local mode for development. 
 * There is no HDFS, you can skip this 
 
     $hadoop fs -put ./yahoo_stocks.csv /tmp/
