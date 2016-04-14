@@ -9,7 +9,7 @@ This docker integrate Hive and Spark in local mode. That mean Hive or Spark will
 * Docker must be installed in your Windows/Mac laptop. If you haven't, see this link https://docs.docker.com/windows/
 * If using docker-machine on (mac/windows) make sure your (default) VM has more than 4GB memory. I recommended 8GB as minimum.
 ```
-docker run -d -name spark kietly/hive-spark
+docker run -d --name spark kietly/hive-spark
 ```
 and open a terminal
 ```
