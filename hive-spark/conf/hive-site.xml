@@ -1,0 +1,26 @@
+
+<configuration>
+
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:derby://127.0.0.1:1527/metastore_db;create=true</value>
+		<description>JDBC connect string for a JDBC metastore</description>
+	</property>
+
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>org.apache.derby.jdbc.ClientDriver</value>
+		<description>Driver class name for a JDBC metastore</description>
+	</property>
+
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/Cloudera/warehouse/</value>
+	</property>
+
+	<property>
+		<name>fs.defaultFS</name>
+		<value>file:///</value>
+	</property>
+
+</configuration>
